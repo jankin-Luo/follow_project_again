@@ -1,0 +1,18 @@
+<environment>
+    <parameter>
+        <key>system</key>
+        <value>mac os</value>
+    </parameter>
+    <parameter>
+        <key>python version</key>
+        <value>3.10.1</value>
+    </parameter>
+    <parameter>
+        <key>项目名</key>
+        <value>xxx项目自动化测试</value>
+    </parameter>
+    <parameter>
+        <key>allure version</key>
+        <value>2.13.1</value>
+    </parameter>
+</environment>

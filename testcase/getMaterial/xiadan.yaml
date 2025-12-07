@@ -1,0 +1,63 @@
+- baseInfo:
+    api_name: 货主下单
+    url: /api/order/customer/orderPlan/create
+    method: post
+    header:
+      Content-Type: application/json;charset=UTF-8
+#      token: ${get_extract_data(product_id,1)}
+    cookies: ${get_extract_data(Cookie)}
+  testCase:
+    - case_name: 货主下单
+      json:
+        orderInfo:
+          template: define
+          urgentType: 2
+          cusName: 总仓
+          orderType: 1
+          charter: 2
+          planType: 1
+          transStartTime: ${get_now_date()}
+          transEndTime: '2025-12-01 10:54:23'
+          orderMark: 货主备注
+          cusId: 1661242770195464193
+        orderCapacityList:
+          - materialCategoryId: ${get_extract_data_list(materialId,0)}
+            materialCategory: 粮食
+            materialName: 小麦
+            materialUnit: KG
+            materialUnitId: 1660891402561581058
+            settlementUnit: KG
+            syncMaterialId: 4
+            billingWeightCoe: None
+            billingVolumeCoe: None
+            sendWeightCoe: None
+            sendVolumeCoe: None
+            materialSpecList: None
+            materialId: 11
+            sendCusId: 1661663745663741954
+            sendCusName: 码头尖庄仓
+            receiveCusId: 1661624733406285825
+            receiveCusName: 502车间
+            sendAdrId: 1674617286107828226
+            sendAdrName: 长宁县五谷粮食购销有限责任公司
+            sendPoiId: 1674615819826425857
+            sendAdrDetail: None
+            receiveAdrId: 1674208708683337730
+            receiveAdrName: 五区一区
+            receivePoiId: 1674208399908237313
+            receiveAdrDetail: 五区一区
+            materialSpecId: 1661349088147214337
+            specName: 1
+            materialNum: 100
+            materialSpecUnit: KG
+            remark: 原粮
+        orderVehicleList: []
+        orderBoxList: []
+      validation:
+#        - contains: { 'error_code': Null }
+        - contains: { 'message': '操作成功' }
+#        - eq: { 'msg': '登录成功' }
+#        - ne: { 'msg': '登录成功' }
+#        - db: select * from products
+#      extract:
+#        token: $.token

@@ -1,0 +1,21 @@
+- baseInfo:
+    api_name: 获取商品列表
+    url: /coupApply/cms/goodsList
+    method: get
+    header:
+      Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+      token: ${get_extract_data(token)}
+    cookies:
+      access_token_cookie: 111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc
+      csrf_access_token: 11126300acb-75e3-426a-91ea-c5c39913c93c
+  testCase:
+    - case_name: 获取商品列表
+      params:
+        msgType : getHandsetListOfCust
+        page: 1
+        size: 20
+      validation:
+        - contains: { 'error_code': '0000' }
+        - eq: { 'msg': '登录成功' }
+      extract_list:
+        goodsId: $.goodsList[*].goodsId
