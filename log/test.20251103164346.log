@@ -1,0 +1,2 @@
+2025-11-03 16:43:46,669 - assertions.py:39 - [assertions:contains_assert] - common.recordlog - ERROR - 预期结果：登录成1功
+,实际结果:登录成功，响应文本断言结果:失败

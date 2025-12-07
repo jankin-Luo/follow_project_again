@@ -1,0 +1,6 @@
+2025-10-29 20:24:59,661 - conftest.py:7 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-10-29 20:24:59,662 - test_login.py:19 - [test_login:test_case04] - common.recordlog - INFO - 获取到的接口地址是:http://127.0.0.1:8787/dar/user/login
+2025-10-29 20:24:59,662 - test_login.py:22 - [test_login:test_case04] - common.recordlog - INFO - 获取到接口的请求方法:post
+2025-10-29 20:24:59,662 - test_login.py:26 - [test_login:test_case04] - common.recordlog - INFO - 获取到接口的请求参数:{'user_name': 'test01', 'passwd': 'admin123'}
+2025-10-29 20:24:59,670 - test_login.py:29 - [test_login:test_case04] - common.recordlog - INFO - 获取到接口的实际返回值:{'error_code': None, 'msg': '登录成功', 'msg_code': 200, 'orgId': '6140913758128971280', 'token': '69dacA4833369F06835281FbeacBe', 'userId': '4099567845459245623'}
+2025-10-29 20:24:59,674 - conftest.py:9 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

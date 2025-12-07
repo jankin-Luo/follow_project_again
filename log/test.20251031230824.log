@@ -1,0 +1,19 @@
+2025-10-31 23:08:24,211 - apiutil.py:86 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-31 23:08:24,211 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-10-31 23:08:24,212 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-10-31 23:08:24,212 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-10-31 23:08:24,212 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名和密码正确登录验证
+2025-10-31 23:08:24,212 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-10-31 23:08:24,212 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-10-31 23:08:24,212 - sendrequests.py:62 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-31 23:08:24,220 - sendrequests.py:30 - [sendrequests:send_request] - common.recordlog - INFO - cookie:{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTkyMzMwNCwianRpIjoiNGViNmVhNjAtOWJhZC00MTUzLWJiNDYtZjYxNzQ1Mzk3OTQ5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTkyMzMwNCwiY3NyZiI6ImE0NTU5NzJhLTk1MzUtNGQ3My1iYjZkLWY4NmRkNzgyNzIyOCIsImV4cCI6MTc2MTkyNDIwNH0.dwCKRh3SK_m27hqw-JvRp2PYu4X1Lvsj39PdRhFnyFE', 'csrf_access_token': 'a455972a-9535-4d73-bb6d-f86dd7827228'}}
+2025-10-31 23:08:24,220 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "error_code": null,
+  "msg": "登录成功",
+  "msg_code": 200,
+  "orgId": "4140913758110176843",
+  "token": "e5c3a0fd6DADCc45F9ceb632B26cc",
+  "userId": "4099567845459245623"
+}
+
+2025-10-31 23:08:24,220 - apiutil.py:117 - [apiutil:extract_data] - common.recordlog - INFO - 正则表达式提取到的参数:{'token': 'e5c3a0fd6DADCc45F9ceb632B26cc'}

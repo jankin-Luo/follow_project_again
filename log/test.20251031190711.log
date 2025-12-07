@@ -1,0 +1,2 @@
+2025-10-31 19:07:11,172 - conftest.py:7 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-10-31 19:07:11,226 - conftest.py:9 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

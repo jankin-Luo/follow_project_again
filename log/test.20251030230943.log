@@ -1,0 +1,6 @@
+2025-10-30 23:09:43,202 - apiutil.py:76 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-30 23:09:43,202 - sendrequests.py:53 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-10-30 23:09:43,202 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-10-30 23:09:43,203 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-10-30 23:09:43,203 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名和密码正确登录验证
+2025-10-30 23:09:43,203 - sendrequests.py:67 - [sendrequests:run_main] - common.recordlog - ERROR - name 'header' is not defined

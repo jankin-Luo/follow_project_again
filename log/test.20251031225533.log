@@ -1,0 +1,33 @@
+2025-10-31 22:55:33,441 - apiutil.py:84 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-31 22:55:33,442 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-10-31 22:55:33,442 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-10-31 22:55:33,442 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-10-31 22:55:33,442 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名和密码正确登录验证
+2025-10-31 22:55:33,442 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-10-31 22:55:33,442 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-10-31 22:55:33,442 - sendrequests.py:62 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-31 22:55:33,449 - sendrequests.py:30 - [sendrequests:send_request] - common.recordlog - INFO - cookie:{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTkyMjUzMywianRpIjoiMjEwMzI1ZTctYzMyZS00YmY5LWE5YWItODBjYTc4MmQ2NjUyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTkyMjUzMywiY3NyZiI6IjQxOGVmMDFkLWEwYTAtNGEzMC04YzY4LTA3NWY4MzMyMmM1MyIsImV4cCI6MTc2MTkyMzQzM30.P4D6lT1zOmLszTGP_SAmDllXO2ySsZTuzbqpRRLG9KQ', 'csrf_access_token': '418ef01d-a0a0-4a30-8c68-075f83322c53'}}
+2025-10-31 22:55:33,449 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "error_code": null,
+  "msg": "登录成功",
+  "msg_code": 200,
+  "orgId": "4140913758110176843",
+  "token": "23A6CdA1c61F5d1eB7adECBb0c7De",
+  "userId": "4099567845459245623"
+}
+
+2025-10-31 22:55:33,449 - apiutil.py:84 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test02', 'passwd': 'admin1234'}}
+2025-10-31 22:55:33,449 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-10-31 22:55:33,449 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-10-31 22:55:33,449 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-10-31 22:55:33,449 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名或密码错误
+2025-10-31 22:55:33,449 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-10-31 22:55:33,449 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-10-31 22:55:33,449 - sendrequests.py:62 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'user_name': 'test02', 'passwd': 'admin1234'}}
+2025-10-31 22:55:33,452 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "msg": "登录失败,用户名或密码错误",
+  "msg_code": 9001,
+  "token": null,
+  "userId": null
+}
+

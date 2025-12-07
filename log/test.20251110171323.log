@@ -1,0 +1,18 @@
+2025-11-10 17:13:23,338 - apiutil.py:81 - [apiutil:specification_yaml] - common.recordlog - INFO - {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2Mjc2MjU5MSwianRpIjoiODllMWE5NjMtMjgyMi00ODU1LTllMWMtMTM5MjY1ZWM4NzhkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2Mjc2MjU5MSwiY3NyZiI6IjQ4YzBmOWFhLTljMWEtNGFkZC04NjIzLTVlMGRhZTA5NmRlMSIsImV4cCI6MTc2Mjc2MzQ5MX0.f6o_Z2TdGai7QlSe5wp-pKg10Kz1f_E_pRkJNb51VmU', 'csrf_access_token': '48c0f9aa-9c1a-4add-8623-5e0dae096de1'}
+2025-11-10 17:13:23,339 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：货主下单
+2025-11-10 17:13:23,339 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/create
+2025-11-10 17:13:23,339 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-11-10 17:13:23,339 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：货主下单
+2025-11-10 17:13:23,339 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+2025-11-10 17:13:23,339 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2Mjc2MjU5MSwianRpIjoiODllMWE5NjMtMjgyMi00ODU1LTllMWMtMTM5MjY1ZWM4NzhkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2Mjc2MjU5MSwiY3NyZiI6IjQ4YzBmOWFhLTljMWEtNGFkZC04NjIzLTVlMGRhZTA5NmRlMSIsImV4cCI6MTc2Mjc2MzQ5MX0.f6o_Z2TdGai7QlSe5wp-pKg10Kz1f_E_pRkJNb51VmU', 'csrf_access_token': '48c0f9aa-9c1a-4add-8623-5e0dae096de1'}
+2025-11-10 17:13:23,339 - sendrequests.py:65 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'json': {'orderInfo': {'template': 'define', 'urgentType': 2, 'cusName': '总仓', 'orderType': 1, 'charter': 2, 'planType': 1, 'transStartTime': '2025-11-10 17:13:23', 'transEndTime': '2025-12-01 10:54:23', 'orderMark': '货主备注', 'cusId': 1661242770195464193}, 'orderCapacityList': [{'materialCategoryId': '1676511586856882134', 'materialCategory': '粮食', 'materialName': '小麦', 'materialUnit': 'KG', 'materialUnitId': 1660891402561581058, 'settlementUnit': 'KG', 'syncMaterialId': 4, 'billingWeightCoe': 'None', 'billingVolumeCoe': 'None', 'sendWeightCoe': 'None', 'sendVolumeCoe': 'None', 'materialSpecList': 'None', 'materialId': 11, 'sendCusId': 1661663745663741954, 'sendCusName': '码头尖庄仓', 'receiveCusId': 1661624733406285825, 'receiveCusName': '502车间', 'sendAdrId': 1674617286107828226, 'sendAdrName': '长宁县五谷粮食购销有限责任公司', 'sendPoiId': 1674615819826425857, 'sendAdrDetail': 'None', 'receiveAdrId': 1674208708683337730, 'receiveAdrName': '五区一区', 'receivePoiId': 1674208399908237313, 'receiveAdrDetail': '五区一区', 'materialSpecId': 1661349088147214337, 'specName': 1, 'materialNum': 100, 'materialSpecUnit': 'KG', 'remark': '原粮'}], 'orderVehicleList': [], 'orderBoxList': []}}
+2025-11-10 17:13:23,352 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功",
+  "orderNo": "DD20251109180115832"
+}
+
+2025-11-10 17:13:23,352 - assertions.py:43 - [assertions:contains_assert] - common.recordlog - INFO - 字符串包含，断言成功：预期结果：操作成功
+,实际结果:操作成功
+2025-11-10 17:13:23,353 - assertions.py:149 - [assertions:assert_result] - common.recordlog - INFO - 测试成功

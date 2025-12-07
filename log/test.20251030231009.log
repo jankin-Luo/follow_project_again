@@ -1,0 +1,17 @@
+2025-10-30 23:10:09,975 - apiutil.py:76 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-30 23:10:09,975 - sendrequests.py:53 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-10-30 23:10:09,975 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-10-30 23:10:09,975 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-10-30 23:10:09,975 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名和密码正确登录验证
+2025-10-30 23:10:09,975 - sendrequests.py:67 - [sendrequests:run_main] - common.recordlog - ERROR - name 'header' is not defined
+2025-10-30 23:10:09,984 - sendrequests.py:29 - [sendrequests:send_request] - common.recordlog - INFO - cookie:{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNzAwOSwianRpIjoiMzg2YjRjZTUtYjQ0OS00MDhlLTllYjUtN2Y5ZGI1MDA1Y2I1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNzAwOSwiY3NyZiI6ImY2ZDRmYTE1LTY0MGUtNDBkNS05ZWQzLWYxNmIzNDE4NTdlZCIsImV4cCI6MTc2MTgzNzkwOX0.9vdxHQBWh77alve-SCONquAtIfcMq_ntcqyajYSXiJI', 'csrf_access_token': 'f6d4fa15-640e-40d5-9ed3-f16b341857ed'}}
+2025-10-30 23:10:09,984 - sendrequests.py:30 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息<Response [200]>
+2025-10-30 23:10:09,984 - apiutil.py:79 - [apiutil:specification_yaml] - common.recordlog - INFO - <Response [200]>
+2025-10-30 23:10:09,984 - apiutil.py:76 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test01', 'passwd': 'admin1234'}}
+2025-10-30 23:10:09,984 - sendrequests.py:53 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-10-30 23:10:09,984 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-10-30 23:10:09,984 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-10-30 23:10:09,984 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名或密码错误
+2025-10-30 23:10:09,984 - sendrequests.py:67 - [sendrequests:run_main] - common.recordlog - ERROR - name 'header' is not defined
+2025-10-30 23:10:09,986 - sendrequests.py:30 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息<Response [200]>
+2025-10-30 23:10:09,986 - apiutil.py:79 - [apiutil:specification_yaml] - common.recordlog - INFO - <Response [200]>

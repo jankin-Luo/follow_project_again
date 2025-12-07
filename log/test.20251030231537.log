@@ -1,0 +1,22 @@
+2025-10-30 23:15:37,321 - apiutil.py:76 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-30 23:16:20,693 - sendrequests.py:53 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-10-30 23:16:20,694 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-10-30 23:16:20,694 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-10-30 23:16:20,694 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名和密码正确登录验证
+2025-10-30 23:16:20,694 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-10-30 23:16:20,694 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-10-30 23:16:20,694 - sendrequests.py:61 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-30 23:16:28,761 - sendrequests.py:29 - [sendrequests:send_request] - common.recordlog - INFO - cookie:{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNzM4OCwianRpIjoiMjdkMzM5YWMtOTgzYS00NTM2LThiNzktOWRmYjQzZTJlNjJlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNzM4OCwiY3NyZiI6IjkzMWFmYTQ0LWI4NzgtNGQyYy04MWM1LWQ0N2Y5YjExNDQ1YiIsImV4cCI6MTc2MTgzODI4OH0.ucPA0pyuErEvIpG7gbQ5tQnTmkd3ThDPyRiVXgTnz3E', 'csrf_access_token': '931afa44-b878-4d2c-81c5-d47f9b11445b'}}
+2025-10-30 23:16:28,761 - sendrequests.py:30 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息<Response [200]>
+2025-10-30 23:16:28,761 - apiutil.py:79 - [apiutil:specification_yaml] - common.recordlog - INFO - <Response [200]>
+2025-10-30 23:16:28,761 - apiutil.py:76 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test02', 'passwd': 'admin1234'}}
+2025-10-30 23:16:35,632 - sendrequests.py:53 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-10-30 23:16:35,633 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-10-30 23:16:35,633 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-10-30 23:16:35,634 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名或密码错误
+2025-10-30 23:16:35,634 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-10-30 23:16:35,634 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-10-30 23:16:35,634 - sendrequests.py:61 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'user_name': 'test02', 'passwd': 'admin1234'}}
+2025-10-30 23:16:50,779 - sendrequests.py:30 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息<Response [200]>
+2025-10-30 23:16:56,609 - apiutil.py:79 - [apiutil:specification_yaml] - common.recordlog - INFO - <Response [200]>
+2025-10-30 23:16:56,610 - apiutil.py:79 - [apiutil:specification_yaml] - common.recordlog - INFO - <Response [200]>

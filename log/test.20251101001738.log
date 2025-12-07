@@ -1,0 +1,86 @@
+2025-11-01 00:17:38,836 - conftest.py:7 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-11-01 00:17:38,838 - apiutil.py:88 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-11-01 00:17:38,838 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-11-01 00:17:38,838 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-11-01 00:17:38,838 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-11-01 00:17:38,838 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名和密码正确登录验证
+2025-11-01 00:17:38,838 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-11-01 00:17:38,838 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-11-01 00:17:38,838 - sendrequests.py:62 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-11-01 00:17:38,849 - sendrequests.py:30 - [sendrequests:send_request] - common.recordlog - INFO - cookie:{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTkyNzQ1OCwianRpIjoiMmJkOGZmNWEtODUwZi00M2FlLWJkYmEtZWNhNGY5OTg3Njk0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTkyNzQ1OCwiY3NyZiI6IjEyMTc3MTZlLWY0NmMtNDM2YS05NjkwLTIzOTAzZmI2OWRjNSIsImV4cCI6MTc2MTkyODM1OH0.jGAG9tbfehPEi04DJK9nvVWW2I4upc__mQbYhbF2FYc', 'csrf_access_token': '1217716e-f46c-436a-9690-23903fb69dc5'}}
+2025-11-01 00:17:38,850 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "error_code": null,
+  "msg": "登录成功",
+  "msg_code": 200,
+  "orgId": "4140913758110176843",
+  "token": "09DeE29F4204C35E17B3deae1Dc18",
+  "userId": "4099567845459245623"
+}
+
+2025-11-01 00:17:38,850 - apiutil.py:131 - [apiutil:extract_data] - common.recordlog - INFO - json提取到的{'token': '09DeE29F4204C35E17B3deae1Dc18'}
+2025-11-01 00:17:38,851 - conftest.py:9 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-11-01 00:17:38,852 - conftest.py:7 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-11-01 00:17:38,853 - apiutil.py:88 - [apiutil:specification_yaml] - common.recordlog - INFO - {'params': {'msgType': 'getHandsetListOfCust', 'page': 1, 'size': 20}}
+2025-11-01 00:17:38,853 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：获取商品列表
+2025-11-01 00:17:38,853 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/coupApply/cms/goodsList
+2025-11-01 00:17:38,853 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：get
+2025-11-01 00:17:38,853 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：获取商品列表
+2025-11-01 00:17:38,853 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8', 'token': '${get_extract_data(token)}'}
+2025-11-01 00:17:38,854 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-11-01 00:17:38,854 - sendrequests.py:68 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'params': {'msgType': 'getHandsetListOfCust', 'page': 1, 'size': 20}}
+2025-11-01 00:17:38,857 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "api_info": "today:21 max:10000 all[90=21+33+36];expires:2030-12-31",
+  "cache": 0,
+  "error_code": "0000",
+  "goodsList": [
+    {
+      "goodsId": "18382788819",
+      "goods_count": "233",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/bcf848aa71c6389607ae7a84b70f1543.jpeg",
+      "goods_name": "【2件套】套装秋冬新款仿獭兔毛钉珠皮草毛毛短外套加厚大衣女装",
+      "original_price": "",
+      "unit_price": "￥99.00"
+    },
+    {
+      "goodsId": "33809635011",
+      "goods_count": "521",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/176019babfdecffa1d9f98f40b7e99b4.jpeg",
+      "goods_name": "好奇小森林心钻装纸尿裤M22拉拉裤L18/XL14超薄透气裤型尿不湿 1件装",
+      "original_price": "",
+      "unit_price": "￥108.00"
+    },
+    {
+      "goodsId": "56996760797",
+      "goods_count": "1181",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "冻干鸡小胸整块增肥营养发腮狗狗零食新手养猫零食幼猫零食100g",
+      "original_price": "",
+      "unit_price": "￥17.80"
+    },
+    {
+      "goodsId": "82193785267",
+      "goods_count": "3000+",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "【自营】ISB伊珊娜意大利水果系列宠物犬猫沐浴露除臭香波护毛素",
+      "original_price": "",
+      "unit_price": "￥650.00"
+    },
+    {
+      "goodsId": "74190550836",
+      "goods_count": "1000+",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "【新品零0CM嵌入式】海尔电冰箱410L家用法式四门多门官方正品",
+      "original_price": "",
+      "unit_price": "￥5746.00"
+    }
+  ],
+  "reason": "",
+  "request_id": "request_id",
+  "secache": "c98b29872e8a4b28859db207944ba817",
+  "secache_date": "2025-10-21 23:14:57",
+  "secache_time": 1761059697000,
+  "translate_language": "zh-CN"
+}
+
+2025-11-01 00:17:38,858 - apiutil.py:151 - [apiutil:extract_data_list] - common.recordlog - INFO - json提取到的{'token': ['18382788819', '33809635011', '56996760797', '82193785267', '74190550836']}
+2025-11-01 00:17:38,858 - conftest.py:9 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

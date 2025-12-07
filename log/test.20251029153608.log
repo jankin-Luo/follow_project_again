@@ -1,0 +1,1 @@
+2025-10-29 15:36:08,534 - test_login.py:19 - [test_login:test_case04] - common.recordlog - INFO - 获取到的接口地址是:http://127.0.0.1:8787/dar/user/login

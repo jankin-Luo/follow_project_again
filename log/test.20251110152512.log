@@ -1,0 +1,17 @@
+2025-11-10 15:25:12,327 - conftest.py:9 - [conftest:clear_extact_data] - common.recordlog - INFO - ------------开始清理extract.yaml------------------
+2025-11-10 15:25:12,327 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-11-10 15:25:12,330 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：下单物料
+2025-11-10 15:25:12,330 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/getMaterial
+2025-11-10 15:25:12,330 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：get
+2025-11-10 15:25:12,330 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：获取物料
+2025-11-10 15:25:12,330 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+2025-11-10 15:25:12,330 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：None
+2025-11-10 15:25:12,330 - sendrequests.py:65 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'json': 'null'}
+2025-11-10 15:25:12,336 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "msg": "未携带cookie信息"
+}
+
+2025-11-10 15:25:12,336 - assertions.py:151 - [assertions:assert_result] - common.recordlog - ERROR - 测试失败
+2025-11-10 15:25:12,336 - assertions.py:152 - [assertions:assert_result] - common.recordlog - ERROR - 异常信息'bool' object is not subscriptable
+2025-11-10 15:25:12,336 - apiutil.py:118 - [apiutil:specification_yaml] - common.recordlog - ERROR - 
+2025-11-10 15:25:12,365 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

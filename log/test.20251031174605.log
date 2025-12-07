@@ -1,0 +1,37 @@
+2025-10-31 17:46:05,496 - conftest.py:7 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-10-31 17:46:05,498 - apiutil.py:76 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-31 17:46:05,498 - sendrequests.py:53 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-10-31 17:46:05,498 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-10-31 17:46:05,498 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-10-31 17:46:05,498 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名和密码正确登录验证
+2025-10-31 17:46:05,498 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-10-31 17:46:05,498 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-10-31 17:46:05,498 - sendrequests.py:61 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-31 17:46:05,509 - sendrequests.py:29 - [sendrequests:send_request] - common.recordlog - INFO - cookie:{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTkwMzk2NSwianRpIjoiNzllMTA0NzctY2UxMC00ZDBlLWJjODItMDAyZjc4ZWIyYTA3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTkwMzk2NSwiY3NyZiI6IjA0MDUxYzRmLTZiZGEtNDA0MS04ZWU0LTMwMmNkOTZlZDljNSIsImV4cCI6MTc2MTkwNDg2NX0.tRAYyjB7ep9xWDPZG7SXxXMOaelX2ubHgqckqNldL_Y', 'csrf_access_token': '04051c4f-6bda-4041-8ee4-302cd96ed9c5'}}
+2025-10-31 17:46:05,509 - sendrequests.py:30 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "error_code": null,
+  "msg": "登录成功",
+  "msg_code": 200,
+  "orgId": "4140913758110176843",
+  "token": "0F0eAeAAfF01746fdc02c5B9AEE15",
+  "userId": "4099567845459245623"
+}
+
+2025-10-31 17:46:05,509 - apiutil.py:79 - [apiutil:specification_yaml] - common.recordlog - INFO - {'error_code': None, 'msg': '登录成功', 'msg_code': 200, 'orgId': '4140913758110176843', 'token': '0F0eAeAAfF01746fdc02c5B9AEE15', 'userId': '4099567845459245623'}
+2025-10-31 17:46:05,509 - apiutil.py:76 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test02', 'passwd': 'admin1234'}}
+2025-10-31 17:46:05,509 - sendrequests.py:53 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-10-31 17:46:05,509 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-10-31 17:46:05,509 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-10-31 17:46:05,509 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名或密码错误
+2025-10-31 17:46:05,510 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-10-31 17:46:05,510 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-10-31 17:46:05,510 - sendrequests.py:61 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'user_name': 'test02', 'passwd': 'admin1234'}}
+2025-10-31 17:46:05,511 - sendrequests.py:30 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "msg": "登录失败,用户名或密码错误",
+  "msg_code": 9001,
+  "token": null,
+  "userId": null
+}
+
+2025-10-31 17:46:05,511 - apiutil.py:79 - [apiutil:specification_yaml] - common.recordlog - INFO - {'msg': '登录失败,用户名或密码错误', 'msg_code': 9001, 'token': None, 'userId': None}
+2025-10-31 17:46:05,512 - conftest.py:9 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

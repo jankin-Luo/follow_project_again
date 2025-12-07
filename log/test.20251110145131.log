@@ -1,0 +1,20 @@
+2025-11-10 14:51:31,359 - apiutil.py:81 - [apiutil:specification_yaml] - common.recordlog - INFO - {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2Mjc1NzQ4MiwianRpIjoiNjYwOTFkYWEtY2E3OS00MzljLTg1NmQtMjJmNzI3NmE4NDQ1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2Mjc1NzQ4MiwiY3NyZiI6IjNlZmFmYjRjLWIzNWEtNDJiMy04NDczLTcyOWFiOTUxNDM2NiIsImV4cCI6MTc2Mjc1ODM4Mn0.kI4c32cUKUF2unobXLH30BTVtrl58pc8eXBWj-ma18w', 'csrf_access_token': '3efafb4c-b35a-42b3-8473-729ab9514366'}
+2025-11-10 14:51:31,359 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：货主下单
+2025-11-10 14:51:31,359 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/create
+2025-11-10 14:51:31,359 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-11-10 14:51:31,359 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：货主下单
+2025-11-10 14:51:31,359 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+2025-11-10 14:51:31,359 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2Mjc1NzQ4MiwianRpIjoiNjYwOTFkYWEtY2E3OS00MzljLTg1NmQtMjJmNzI3NmE4NDQ1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2Mjc1NzQ4MiwiY3NyZiI6IjNlZmFmYjRjLWIzNWEtNDJiMy04NDczLTcyOWFiOTUxNDM2NiIsImV4cCI6MTc2Mjc1ODM4Mn0.kI4c32cUKUF2unobXLH30BTVtrl58pc8eXBWj-ma18w', 'csrf_access_token': '3efafb4c-b35a-42b3-8473-729ab9514366'}
+2025-11-10 14:51:31,359 - sendrequests.py:65 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'json': {'orderInfo': {'template': 'define', 'urgentType': 2, 'cusName': '总仓', 'orderType': 1, 'charter': 2, 'planType': 1, 'transStartTime': '2025-11-10 14:51:31', 'transEndTime': '2025-12-01 10:54:23', 'orderMark': '货主备注', 'cusId': 1661242770195464193}, 'orderCapacityList': [{'materialCategoryId': 1676511586856882178, 'materialCategory': '粮食', 'materialName': '小麦', 'materialUnit': 'KG', 'materialUnitId': 1660891402561581058, 'settlementUnit': 'KG', 'syncMaterialId': 4, 'billingWeightCoe': 'None', 'billingVolumeCoe': 'None', 'sendWeightCoe': 'None', 'sendVolumeCoe': 'None', 'materialSpecList': 'None', 'materialId': 1661349087048306690, 'sendCusId': 1661663745663741954, 'sendCusName': '码头尖庄仓', 'receiveCusId': 1661624733406285825, 'receiveCusName': '502车间', 'sendAdrId': 1674617286107828226, 'sendAdrName': '长宁县五谷粮食购销有限责任公司', 'sendPoiId': 1674615819826425857, 'sendAdrDetail': 'None', 'receiveAdrId': 1674208708683337730, 'receiveAdrName': '五区一区', 'receivePoiId': 1674208399908237313, 'receiveAdrDetail': '五区一区', 'materialSpecId': 1661349088147214337, 'specName': 1, 'materialNum': 100, 'materialSpecUnit': 'KG', 'remark': '原粮'}]}}
+2025-11-10 14:51:31,366 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "code": 40000,
+  "message": "物料id不存在"
+}
+
+2025-11-10 14:51:31,366 - apiutil.py:150 - [apiutil:extract_data] - common.recordlog - ERROR - 接口返回值提取异常，请检查yaml的extract表达式对不对
+2025-11-10 14:51:31,366 - assertions.py:46 - [assertions:contains_assert] - common.recordlog - ERROR - 预期结果：操作成功
+,实际结果:物料id不存在，响应文本断言结果:失败
+2025-11-10 14:51:31,454 - assertions.py:115 - [assertions:assert_mysql] - common.recordlog - INFO - 数据库断言成功
+2025-11-10 14:51:31,454 - assertions.py:151 - [assertions:assert_result] - common.recordlog - ERROR - 测试失败
+2025-11-10 14:51:31,455 - assertions.py:152 - [assertions:assert_result] - common.recordlog - ERROR - 异常信息
+2025-11-10 14:51:31,455 - apiutil.py:118 - [apiutil:specification_yaml] - common.recordlog - ERROR - 

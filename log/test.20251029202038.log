@@ -1,0 +1,4 @@
+2025-10-29 20:20:38,415 - test_login.py:19 - [test_login:test_case04] - common.recordlog - INFO - 获取到的接口地址是:http://127.0.0.1:8787/dar/user/login
+2025-10-29 20:20:38,415 - test_login.py:22 - [test_login:test_case04] - common.recordlog - INFO - 获取到接口的请求方法:post
+2025-10-29 20:20:38,415 - test_login.py:26 - [test_login:test_case04] - common.recordlog - INFO - 获取到接口的请求参数:{'user_name': 'test01', 'passwd': 'admin123'}
+2025-10-29 20:20:38,423 - test_login.py:29 - [test_login:test_case04] - common.recordlog - INFO - 获取到接口的实际返回值:{'error_code': None, 'msg': '登录成功', 'msg_code': 200, 'orgId': '6140913758128971280', 'token': '4bd7584eA7F763d73353623C2CB4f', 'userId': '4099567845459245623'}

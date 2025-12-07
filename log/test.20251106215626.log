@@ -1,0 +1,11 @@
+2025-11-06 21:56:26,309 - conftest.py:9 - [conftest:clear_extact_data] - common.recordlog - INFO - ------------开始清理extract.yaml------------------
+2025-11-06 21:56:26,310 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-11-06 21:56:26,311 - apiutil.py:114 - [apiutil:specification_yaml] - common.recordlog - ERROR - 'str' object has no attribute 'pop'
+2025-11-06 21:56:26,377 - apiutil.py:114 - [apiutil:specification_yaml] - common.recordlog - ERROR - 'str' object has no attribute 'pop'
+2025-11-06 21:56:26,389 - apiutil.py:114 - [apiutil:specification_yaml] - common.recordlog - ERROR - 'str' object has no attribute 'pop'
+2025-11-06 21:56:26,395 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-11-06 21:56:26,396 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-11-06 21:56:26,399 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-11-06 21:56:26,400 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-11-06 21:56:26,401 - apiutil.py:114 - [apiutil:specification_yaml] - common.recordlog - ERROR - 'str' object has no attribute 'pop'
+2025-11-06 21:56:26,410 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

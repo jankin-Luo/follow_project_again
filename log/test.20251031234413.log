@@ -1,0 +1,41 @@
+2025-10-31 23:44:13,688 - conftest.py:7 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-10-31 23:44:13,690 - apiutil.py:88 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-31 23:44:13,690 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-10-31 23:44:13,690 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-10-31 23:44:13,690 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-10-31 23:44:13,690 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名和密码正确登录验证
+2025-10-31 23:44:13,690 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-10-31 23:44:13,690 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-10-31 23:44:13,690 - sendrequests.py:62 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-10-31 23:44:13,700 - sendrequests.py:30 - [sendrequests:send_request] - common.recordlog - INFO - cookie:{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTkyNTQ1MywianRpIjoiZGNlZGQ4MzItMjg1OS00N2E0LTkyOTctYzI4YjNiYTFkNmUyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTkyNTQ1MywiY3NyZiI6IjE2MjFlODRjLTVkYmEtNDUwMi05ODQwLWRmNWQ1ZjliYzk0YyIsImV4cCI6MTc2MTkyNjM1M30.MpBu7CNAzu2ium6Lo4Vy6bWSnUPKnX2cXkX8JhF7WMs', 'csrf_access_token': '1621e84c-5dba-4502-9840-df5d5f9bc94c'}}
+2025-10-31 23:44:13,700 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "error_code": null,
+  "msg": "登录成功",
+  "msg_code": 200,
+  "orgId": "6140913758128971280",
+  "token": "47E89cC38bBa50FDaA8EfaadB23F7",
+  "userId": "4099567845459245623"
+}
+
+2025-10-31 23:44:13,701 - apiutil.py:129 - [apiutil:extract_data] - common.recordlog - INFO - json提取到的{'token': '47E89cC38bBa50FDaA8EfaadB23F7'}
+2025-10-31 23:44:13,702 - conftest.py:9 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-10-31 23:44:13,703 - conftest.py:7 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-10-31 23:44:13,704 - apiutil.py:88 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'msgType': 'getHandsetListOfCust', 'page': 1, 'size': 20}}
+2025-10-31 23:44:13,704 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：获取商品列表
+2025-10-31 23:44:13,704 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/coupApply/cms/goodsList
+2025-10-31 23:44:13,704 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：get
+2025-10-31 23:44:13,704 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：获取商品列表
+2025-10-31 23:44:13,704 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8', 'token': '${get_extract_data(token)}'}
+2025-10-31 23:44:13,704 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-10-31 23:44:13,704 - sendrequests.py:62 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'msgType': 'getHandsetListOfCust', 'page': 1, 'size': 20}}
+2025-10-31 23:44:13,707 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "error_code": "9001",
+  "msg": "参数错误"
+}
+
+2025-10-31 23:44:13,708 - apiutil.py:132 - [apiutil:extract_data] - common.recordlog - ERROR - 接口返回值提取异常，请检查yaml的extract表达式对不对
+2025-10-31 23:44:13,708 - conftest.py:9 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-10-31 23:44:13,709 - conftest.py:7 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-10-31 23:44:13,710 - conftest.py:9 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-10-31 23:44:13,711 - conftest.py:7 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-10-31 23:44:17,728 - conftest.py:9 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

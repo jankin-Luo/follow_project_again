@@ -1,0 +1,19 @@
+INFO     common.recordlog:conftest.py:9 ------------开始清理extract.yaml------------------
+INFO     common.recordlog:conftest.py:15 -------------这是pytest前后置主要的处理方式--------------
+INFO     common.recordlog:sendrequests.py:54 接口名称：新增用户
+INFO     common.recordlog:sendrequests.py:55 接口请求地址：http://127.0.0.1:8787/dar/user/addUser
+INFO     common.recordlog:sendrequests.py:56 请求方法：POST
+INFO     common.recordlog:sendrequests.py:57 测试用例名称：正常新增用户
+INFO     common.recordlog:sendrequests.py:58 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO     common.recordlog:sendrequests.py:59 Cookies：None
+INFO     common.recordlog:sendrequests.py:62 请求参数:{'data': {'username': 'testadduser', 'password': 'tset6789890', 'role_id': 123456789, 'dates': '2023-12-31', 'phone': 13800000000, 'token': 'None'}}
+INFO     common.recordlog:sendrequests.py:31 接口的实际返回信息{
+  "msg": "新增失败",
+  "msg_code": 9001
+}
+
+ERROR    common.recordlog:assertions.py:46 预期结果：新增成功
+,实际结果:新增失败，响应文本断言结果:失败
+ERROR    common.recordlog:assertions.py:151 测试失败
+ERROR    common.recordlog:assertions.py:152 异常信息
+ERROR    common.recordlog:apiutil.py:114

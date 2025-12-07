@@ -1,0 +1,1 @@
+2025-11-10 19:13:39,453 - connection.py:66 - [connection:__init__] - common.recordlog - ERROR - module 'pymysql.cursors' has no attribute 'DicCursors'

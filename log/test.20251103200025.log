@@ -1,0 +1,23 @@
+2025-11-03 20:00:25,351 - conftest.py:9 - [conftest:clear_extact_data] - common.recordlog - INFO - ------------开始清理extract.yaml------------------
+2025-11-03 20:00:25,352 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-11-03 20:00:25,354 - apiutil.py:91 - [apiutil:specification_yaml] - common.recordlog - INFO - {'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-11-03 20:00:25,354 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-11-03 20:00:25,354 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-11-03 20:00:25,354 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-11-03 20:00:25,354 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名和密码正确登录验证
+2025-11-03 20:00:25,354 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-11-03 20:00:25,354 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-11-03 20:00:25,355 - sendrequests.py:62 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-11-03 20:00:25,364 - sendrequests.py:30 - [sendrequests:send_request] - common.recordlog - INFO - cookie:{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjE3MTIyNSwianRpIjoiNTgyNjVmYTYtYjUyNi00YmM0LTlhYWItZTliNzRjZmY3OGFhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MjE3MTIyNSwiY3NyZiI6ImU3YTQxM2I5LWYxNTMtNDE3MS1iMDc5LWY0OGI2NGVmNzBiYyIsImV4cCI6MTc2MjE3MjEyNX0.h0J4QIGSV50PAtk0px2mC3p1MxQXtR2Wf-zj2V5htRQ', 'csrf_access_token': 'e7a413b9-f153-4171-b079-f48b64ef70bc'}}
+2025-11-03 20:00:25,364 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "error_code": null,
+  "msg": "登录成功",
+  "msg_code": 200,
+  "orgId": "6140913758128971280",
+  "token": "C3CBBb2b652700d841f0EddDbd5de",
+  "userId": "4099567845459245623"
+}
+
+2025-11-03 20:00:25,365 - apiutil.py:137 - [apiutil:extract_data] - common.recordlog - INFO - json提取到的{'token': 'C3CBBb2b652700d841f0EddDbd5de'}
+2025-11-03 20:00:25,365 - assertions.py:73 - [assertions:assert_result] - common.recordlog - INFO - 测试成功
+2025-11-03 20:00:25,366 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

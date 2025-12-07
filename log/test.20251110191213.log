@@ -1,0 +1,1 @@
+2025-11-10 19:12:26,200 - connection.py:65 - [connection:__init__] - common.recordlog - ERROR - port should be of type int
