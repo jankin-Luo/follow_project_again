@@ -9,9 +9,12 @@ from base.generateId import m_id, t_id
 
 @allure.feature(next(m_id) + '用户管理模块（单接口）')
 class TestUserManager:
-
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.issue("JIRA-123", "登录失败问题")
+    @allure.testcase("https://testrail.example.com/case/456", "测试用例地址")
     # 场景，allure报告的目录结构
     @allure.story(next(t_id) + "新增用户")
+    @allure.title('心一跳')
     # 测试用例执行顺序设置
     @pytest.mark.run(order=1)
     # 参数化，yaml数据驱动

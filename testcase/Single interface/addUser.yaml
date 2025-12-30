@@ -16,16 +16,16 @@
       validation:
         - contains: { 'status_code': 200 }
         - contains: { 'msg': '新增成功' }
-    - case_name: 无效新增·缺少token
+    - case_name: 无效新增·缺少手机号码
       data:
-        username: testadduser
+        username: testadduser12
         password: tset6789890333
-        role_id: 123456789
+        role_id: 1234567
         dates: '2023-12-31'
-        phone: 13800000000
-        token:
+        phone: ""
+        token: ${get_extract_data(token)}
       validation:
-        - contains: { 'status_code': 200 }
+#        - contains: { 'status_code': 200 }
         - contains: { 'msg': '新增失败' }
 #    - case_name: 无效新增·缺少必填参数username
 #      data:

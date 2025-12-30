@@ -1,0 +1,9 @@
+2025-12-23 16:57:00,049 - conftest.py:9 - [conftest:clear_extact_data] - common.recordlog - INFO - ------------开始清理extract.yaml------------------
+2025-12-23 16:57:00,049 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-12-23 16:57:00,050 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-12-23 16:57:00,051 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-12-23 16:57:00,052 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-12-23 16:57:00,053 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-12-23 16:57:00,054 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-12-23 16:57:00,055 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-12-23 16:57:00,056 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

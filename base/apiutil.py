@@ -100,13 +100,13 @@ class BaseRequest:
                 for fk, fv in file.items():
                     allure.attach(json.dumps(file), '导入文件')
                     files = {fk: open(fv, mode='rb')}
-
+            # with allure.step('请求接口地址'):
             res = self.send.run_main(name=api_name, case_name=case_name, url=url, headers=header, method=method,
                                      cookies=cookies, file=files, **tc)
             res_text = res.text
             # logs.info(f'text区别是啥：{json.loads(res_text)}')
             # logs.info(f'json区别是啥：{res.json()}')
-            allure.attach(res.text, f'接口响应信息', allure.attachment_type.TEXT)
+            allure.attach(res.text.encode('utf-8').decode('unicode_escape'), f'接口响应信息', allure.attachment_type.TEXT)
             allure.attach(str(res.status_code), f'接口响应码', allure.attachment_type.TEXT)
 
             res_json = res.json()

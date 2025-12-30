@@ -2,6 +2,8 @@ from common.recordlog import logs
 from conf.OperationConfig import OperationConfig
 import pymysql
 from pymysql import cursors
+import pymysql
+from dbutils.pooled_db import PooledDB
 
 conf = OperationConfig()
 
@@ -83,6 +85,32 @@ class ConnectMysql():
         if self.conn and self.cur:
             self.cur.close()
             self.conn.close()
+
+class DBPool:
+    _instance = None
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super(DBPool, cls).__new__(cls)
+            cls._instance.pool = None
+            cls._instance.create_pool()
+        return cls._instance
+
+    def create_pool(self):
+        self.pool = PooledDB(
+            creator=pymysql,
+            host=conf.get_mysql('host'),
+            port=int(conf.get_mysql('port')),
+            user=conf.get_mysql('username'),
+            password=conf.get_mysql('password'),
+            database=conf.get_mysql('database'),
+            charset='utf8',
+            maxconnections=10,  # 最大连接数
+            blocking=True
+        )
+
+    def get_connection(self):
+        return self.pool.connection()
 
 if __name__ == '__main__':
     conn = ConnectMysql()

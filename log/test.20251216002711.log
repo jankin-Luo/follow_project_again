@@ -1,0 +1,52 @@
+2025-12-16 00:27:11,483 - conftest.py:9 - [conftest:clear_extact_data] - common.recordlog - INFO - ------------开始清理extract.yaml------------------
+2025-12-16 00:27:11,483 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-12-16 00:27:11,485 - apiutil.py:83 - [apiutil:specification_yaml] - common.recordlog - INFO - {'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-12-16 00:27:11,485 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：用户登录
+2025-12-16 00:27:11,485 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+2025-12-16 00:27:11,485 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2025-12-16 00:27:11,485 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：用户名和密码正确登录验证
+2025-12-16 00:27:11,485 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-12-16 00:27:11,485 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-12-16 00:27:11,485 - sendrequests.py:62 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-12-16 00:27:11,499 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息<Response [502]>
+2025-12-16 00:27:11,499 - apiutil.py:120 - [apiutil:specification_yaml] - common.recordlog - ERROR - Expecting value: line 1 column 1 (char 0)
+2025-12-16 00:27:11,546 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-12-16 00:27:11,547 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-12-16 00:27:11,549 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：新增用户
+2025-12-16 00:27:11,549 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/dar/user/addUser
+2025-12-16 00:27:11,549 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：POST
+2025-12-16 00:27:11,549 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：正常新增用户
+2025-12-16 00:27:11,549 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-12-16 00:27:11,549 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：None
+2025-12-16 00:27:11,549 - sendrequests.py:62 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'data': {'username': 'testadduser', 'password': 'tset6789890', 'role_id': 123456789, 'dates': '2023-12-31', 'phone': 13800000000, 'token': 'None'}}
+2025-12-16 00:27:11,551 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息<Response [502]>
+2025-12-16 00:27:11,551 - apiutil.py:120 - [apiutil:specification_yaml] - common.recordlog - ERROR - Expecting value: line 1 column 1 (char 0)
+2025-12-16 00:27:11,575 - apiutil.py:120 - [apiutil:specification_yaml] - common.recordlog - ERROR - name 'null' is not defined
+2025-12-16 00:27:11,582 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-12-16 00:27:11,583 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-12-16 00:27:11,584 - apiutil.py:83 - [apiutil:specification_yaml] - common.recordlog - INFO - ${get_extract_data(Cookie)}
+2025-12-16 00:27:11,584 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：下单物料
+2025-12-16 00:27:11,584 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/getMaterial
+2025-12-16 00:27:11,585 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：get
+2025-12-16 00:27:11,585 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：获取物料
+2025-12-16 00:27:11,585 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+2025-12-16 00:27:11,585 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：${get_extract_data(Cookie)}
+2025-12-16 00:27:11,585 - sendrequests.py:65 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'json': 'null'}
+2025-12-16 00:27:11,585 - apiutil.py:120 - [apiutil:specification_yaml] - common.recordlog - ERROR - string indices must be integers
+2025-12-16 00:27:11,604 - apiutil.py:83 - [apiutil:specification_yaml] - common.recordlog - INFO - ${get_extract_data(Cookie)}
+2025-12-16 00:27:11,604 - apiutil.py:120 - [apiutil:specification_yaml] - common.recordlog - ERROR - object of type 'NoneType' has no len()
+2025-12-16 00:27:11,616 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------
+2025-12-16 00:27:11,617 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2025-12-16 00:27:11,618 - apiutil.py:83 - [apiutil:specification_yaml] - common.recordlog - INFO - {'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-12-16 00:27:11,618 - sendrequests.py:54 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：获取商品列表
+2025-12-16 00:27:11,618 - sendrequests.py:55 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://127.0.0.1:8787/coupApply/cms/goodsList
+2025-12-16 00:27:11,618 - sendrequests.py:56 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：get
+2025-12-16 00:27:11,618 - sendrequests.py:57 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：获取商品列表
+2025-12-16 00:27:11,618 - sendrequests.py:58 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8', 'token': '${get_extract_data(token)}'}
+2025-12-16 00:27:11,618 - sendrequests.py:59 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：{'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-12-16 00:27:11,618 - sendrequests.py:68 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'params': {'msgType': 'getHandsetListOfCust', 'page': 1, 'size': 20}}
+2025-12-16 00:27:11,621 - sendrequests.py:31 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息<Response [502]>
+2025-12-16 00:27:11,622 - apiutil.py:120 - [apiutil:specification_yaml] - common.recordlog - ERROR - Expecting value: line 1 column 1 (char 0)
+2025-12-16 00:27:11,642 - apiutil.py:83 - [apiutil:specification_yaml] - common.recordlog - INFO - {'access_token_cookie': '111eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MTgzNTAyMCwianRpIjoiZWY5Y2NmNWEtOTMzNi00YTBmLTljZjAtYTBiZmRiMjExZTc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2MTgzNTAyMCwiY3NyZiI6IjI2MzAwYWNiLTc1ZTMtNDI2YS05MWVhLWM1YzM5OTEzYzkzYyIsImV4cCI6MTc2MTgzNTkyMH0.y2v55ZfeXnMYqtYMcysbYYxX52losVZBT9WyHiXwrdc', 'csrf_access_token': '11126300acb-75e3-426a-91ea-c5c39913c93c'}
+2025-12-16 00:27:11,642 - apiutil.py:120 - [apiutil:specification_yaml] - common.recordlog - ERROR - object of type 'NoneType' has no len()
+2025-12-16 00:27:11,652 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

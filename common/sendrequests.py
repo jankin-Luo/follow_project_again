@@ -6,6 +6,7 @@ import requests
 from common.recordlog import logs
 from common.readyaml import ReadYamlData
 import allure
+from tenacity import retry, stop_after_attempt, wait_fixed, retry_if_exception_type
 
 
 class SendRequests():
@@ -17,6 +18,13 @@ class SendRequests():
     def __init__(self):
         self.read = ReadYamlData()
 
+    @retry(
+        stop=stop_after_attempt(2),
+        wait=wait_fixed(1),
+        retry=(retry_if_exception_type(requests.exceptions.Timeout)|
+               retry_if_exception_type(requests.exceptions.ConnectionError)
+        )
+    )
     def send_request(self, **kwargs):
         cookie = {}
         session = requests.session()
@@ -29,9 +37,9 @@ class SendRequests():
                 self.read.write_yaml_data(cookie)
                 logs.info(f'cookie:{cookie}')
             logs.info(f'接口的实际返回信息{res.text.encode("utf-8").decode("unicode_escape") if res.text else res}')
-        except requests.exceptions.ConnectionError:
-            logs.error('接口连接服务器异常')
-            pytest.fail('接口请求异常，可能是requests请求数过多或请求速度过快')
+        # except requests.exceptions.ConnectionError:
+        #     logs.error('接口连接服务器异常')
+        #     pytest.fail('接口请求异常，可能是requests请求数过多或请求速度过快')
         except requests.exceptions.HTTPError:
             logs.error('HTTP异常')
             pytest.fail('http请求异常')
@@ -60,7 +68,7 @@ class SendRequests():
             req_params = json.dumps(kwargs, ensure_ascii=False)
             if 'data' in kwargs.keys():
                 logs.info(f'请求参数:{kwargs}')
-                allure.attach(req_params,f'请求参数：{req_params}',allure.attachment_type.TEXT)
+                allure.attach(req_params, f'请求参数：{req_params}', allure.attachment_type.TEXT)
             elif 'json' in kwargs.keys():
                 logs.info(f'请求参数:{kwargs}')
                 allure.attach(req_params, f'请求参数：{req_params}', allure.attachment_type.TEXT)

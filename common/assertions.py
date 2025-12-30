@@ -17,6 +17,13 @@ class Assertions:
     5、数据库断言
     '''
 
+    def _log_and_attach(self, error_type, error_msg, attachment_title):
+        '''统一日志和allure处理报告'''
+        logs.error(f'{error_type}: {error_msg}')
+        allure.attach(f'错误类型:{error_type}\n错误信息: {error_msg}',
+                      attachment_title,
+                      attachment_type=allure.attachment_type.TEXT)
+
     def contains_assert(self, value, response, status_code):
         '''
         第一种模式，字符串包含断言，断言预期结果字符串包含在接口返回中
@@ -32,8 +39,15 @@ class Assertions:
             if assert_k == 'status_code':
                 if assert_v != status_code:
                     flag += 1
-                    allure.attach(f'预期结果:{assert_v}\n实际结果:{status_code}', '响应代码断言结果:失败', allure.attachment_type.TEXT)
-                    logs.error('contains断言失败，接口返回码{}不等于预期{}'.format(status_code, assert_v))
+                    #优化版
+                    error_type = '技术问题'
+                    error_msg = f'状态码不正确，预期为{assert_v},实际为{status_code}'
+                    self._log_and_attach(error_type, error_msg, f'状态码断言失败')
+                    # allure.attach(f'预期结果:{assert_v}\n实际结果:{status_code}', '响应代码断言结果:失败',
+                    #               allure.attachment_type.TEXT)
+                    # logs.error('contains断言失败，接口返回码{}不等于预期{}'.format(status_code, assert_v))
+                else:
+                    logs.info(f'状态码匹配{status_code}={assert_v}')
             else:
                 res_list = jsonpath.jsonpath(response, '$..%s' % assert_k)
                 if isinstance(res_list[0], str):
@@ -77,7 +91,7 @@ class Assertions:
             raise TypeError('断言失败，类型错误，预期结果和接口返回数据类型均需要字典类型！')
         return flag
 
-    def not_equal_assert(self):
+    def not_equal_assert(self, value, response):
         '''
         不相等断言模式
         :param value:预期结果，也就是yaml文件中的validation中的关键字参数，必须为dict类型
@@ -106,7 +120,7 @@ class Assertions:
             raise TypeError('断言失败，类型错误，预期结果和接口返回数据类型均需要字典类型！')
         return flag
 
-    def assert_mysql(self,expected_sql):
+    def assert_mysql(self, expected_sql):
         '''数据库断言'''
         flag = 0
         conn = ConnectMysql()
@@ -118,7 +132,6 @@ class Assertions:
             logs.error('数据库断言失败，数据库中不存在该数据')
             flag += 1
             return flag
-
 
     def assert_result(self, expected, response, status_code):
         '''
