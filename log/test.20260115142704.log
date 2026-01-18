@@ -1,0 +1,12 @@
+2026-01-15 14:27:05,119 - conftest.py:9 - [conftest:clear_extact_data] - common.recordlog - INFO - ------------开始清理extract.yaml------------------
+2026-01-15 14:27:05,120 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2026-01-15 14:27:05,121 - apiutil.py:83 - [apiutil:specification_yaml] - common.recordlog - INFO - null
+2026-01-15 14:27:05,121 - sendrequests.py:64 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：登录
+2026-01-15 14:27:05,121 - sendrequests.py:65 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://118.25.75.64/prod-api/login
+2026-01-15 14:27:05,121 - sendrequests.py:66 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2026-01-15 14:27:05,121 - sendrequests.py:67 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：获取物料
+2026-01-15 14:27:05,122 - sendrequests.py:68 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+2026-01-15 14:27:05,122 - sendrequests.py:69 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：null
+2026-01-15 14:27:05,122 - sendrequests.py:75 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'json': {'username': 'admin', 'password': 'admin123', 'code': 0, 'uuid': 123456789}}
+2026-01-15 14:27:05,122 - apiutil.py:120 - [apiutil:specification_yaml] - common.recordlog - ERROR - string indices must be integers
+2026-01-15 14:27:05,178 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

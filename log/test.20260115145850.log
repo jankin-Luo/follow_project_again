@@ -1,0 +1,13 @@
+2026-01-15 14:58:50,580 - sendrequests.py:64 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：登录
+2026-01-15 14:58:50,580 - sendrequests.py:65 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://118.25.75.64/prod-api/login
+2026-01-15 14:58:50,580 - sendrequests.py:66 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2026-01-15 14:58:50,580 - sendrequests.py:67 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：登陆接口
+2026-01-15 14:58:50,580 - sendrequests.py:68 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+2026-01-15 14:58:50,581 - sendrequests.py:69 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：None
+2026-01-15 14:58:50,581 - sendrequests.py:75 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'json': {'username': 'admin', 'password': 'admin123', 'code': '0000', 'uuid': '123456789'}}
+2026-01-15 14:58:50,958 - sendrequests.py:40 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{"msg":"æä½æå","code":200,"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luX3VzZXJfa2V5IjoiZDU2YzgyNWEtMjhhZS00NjcxLTgzZGMtYzg5NjhjYTBiOTcwIn0.DMsC9SCed8sa5I8VP8Q7GuEXu_EyLUNAUBFyp3CA1qp-qjfum8ix-TCj8c06QrxC7FHNKs1UWVg74HMttA00IA"}
+2026-01-15 14:58:50,959 - apiutil.py:149 - [apiutil:extract_data] - common.recordlog - INFO - json提取到的{'token': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luX3VzZXJfa2V5IjoiZDU2YzgyNWEtMjhhZS00NjcxLTgzZGMtYzg5NjhjYTBiOTcwIn0.DMsC9SCed8sa5I8VP8Q7GuEXu_EyLUNAUBFyp3CA1qp-qjfum8ix-TCj8c06QrxC7FHNKs1UWVg74HMttA00IA'}
+2026-01-15 14:58:50,962 - assertions.py:57 - [assertions:contains_assert] - common.recordlog - INFO - 字符串包含，断言成功：预期结果：200
+,实际结果:[200]
+2026-01-15 14:58:50,962 - assertions.py:86 - [assertions:equal_assert] - common.recordlog - INFO - 相等断言成功，接口实际结果为{'msg': '操作成功'}，等于预期结果{'msg': '操作成功'}
+2026-01-15 14:58:50,962 - assertions.py:162 - [assertions:assert_result] - common.recordlog - INFO - 测试成功

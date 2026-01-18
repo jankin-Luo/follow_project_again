@@ -1,3 +1,0 @@
-INFO     common.recordlog:conftest.py:9 ------------开始清理extract.yaml------------------
-INFO     common.recordlog:conftest.py:15 -------------这是pytest前后置主要的处理方式--------------
-INFO     common.recordlog:conftest.py:17 ------------这是后置处理了---------------

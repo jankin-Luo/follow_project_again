@@ -104,7 +104,7 @@ class ReadYamlData:
             f.truncate()
 
 if __name__ == '__main__':
-    res = get_testcase_yaml('../testcase/getMaterial/xiadan.yaml')
+    res = get_testcase_yaml('../testcase/ruoyitest/xiadan.yaml')
     print(res)
 
     '''

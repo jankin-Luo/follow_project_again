@@ -1,0 +1,19 @@
+- baseInfo:
+    api_name: 下单物料
+    url: /api/order/customer/orderPlan/ruoyitest
+    method: get
+    header:
+      Content-Type: application/json;charset=UTF-8
+#      token: ${get_extract_data(product_id,1)}
+    cookies: ${get_extract_data(Cookie)}
+  testCase:
+    - case_name: 获取物料
+      json:
+      validation:
+#        - contains: { 'error_code': Null }
+        - contains: { 'code': 20000 }
+#        - eq: { 'msg': '登录成功' }
+#        - ne: { 'msg': '登录成功' }
+#        - db: select * from products
+      extract_list:
+        materialId: $.material[*]

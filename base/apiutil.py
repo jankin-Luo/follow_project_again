@@ -79,7 +79,10 @@ class BaseRequest:
             header = baseinfo['header']
             allure.attach(str(header), f'请求头:{header}', allure.attachment_type.TEXT)
             try:
-                cookies = self.replace_load(baseinfo['cookies'])
+                if baseinfo['cookies']:
+                    cookies = self.replace_load(baseinfo['cookies'])
+                else:
+                    cookies = None
                 logs.info(cookies)
                 allure.attach(cookies, f'cookies:{cookies}', allure.attachment_type.TEXT)
             except:
@@ -174,7 +177,7 @@ class BaseRequest:
 
 
 if __name__ == '__main__':
-    data = get_testcase_yaml('../testcase/getMaterial/xiadan.yaml')
+    data = get_testcase_yaml('../testcase/ruoyitest/login.yaml')
     # data = get_testcase_yaml('../testcase/login/login.yaml')
     # print(data[0])
     # print(data[0][0])

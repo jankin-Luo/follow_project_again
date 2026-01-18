@@ -1,0 +1,10 @@
+2026-01-06 20:38:52,972 - sendrequests.py:38 - [sendrequests:send_request] - common.recordlog - INFO - cookie:{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NzcwMzEzMiwianRpIjoiZWNkMjRkYTYtZDQzMi00MWMzLTgxYmUtMGMyNzI5NDNmNmZjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTc2NzcwMzEzMiwiY3NyZiI6IjFhMTBlM2EyLTEwNzMtNGMzNC05NzhhLWNlYTA0NjE3ZTMxZCIsImV4cCI6MTc2NzcwNDAzMn0.57-mwE4_8Xm0XCY64CvVac5Tb9ZzKmSKnp6c5GI8WX4', 'csrf_access_token': '1a10e3a2-1073-4c34-978a-cea04617e31d'}}
+2026-01-06 20:38:52,973 - sendrequests.py:39 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{
+  "error_code": null,
+  "msg": "登录成功",
+  "msg_code": 200,
+  "orgId": "4140913758110176843",
+  "token": "0E7050a14DABa4E89f08871669eD3",
+  "userId": "5954705042629169743"
+}
+

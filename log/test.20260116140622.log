@@ -1,0 +1,69 @@
+2026-01-16 14:06:22,860 - conftest.py:9 - [conftest:clear_extact_data] - common.recordlog - INFO - ------------开始清理extract.yaml------------------
+2026-01-16 14:06:22,861 - conftest.py:15 - [conftest:fixture_test] - common.recordlog - INFO - -------------这是pytest前后置主要的处理方式--------------
+2026-01-16 14:06:22,863 - apiutil.py:86 - [apiutil:specification_yaml] - common.recordlog - INFO - None
+2026-01-16 14:06:22,864 - sendrequests.py:64 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：登录
+2026-01-16 14:06:22,864 - sendrequests.py:65 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://118.25.75.64/prod-api/login
+2026-01-16 14:06:22,864 - sendrequests.py:66 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2026-01-16 14:06:22,864 - sendrequests.py:67 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：登陆接口成功登录
+2026-01-16 14:06:22,864 - sendrequests.py:68 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+2026-01-16 14:06:22,864 - sendrequests.py:69 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：None
+2026-01-16 14:06:22,864 - sendrequests.py:75 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'json': {'username': 'admin', 'password': 'admin123', 'code': '0000', 'uuid': '123456789'}}
+2026-01-16 14:06:23,387 - sendrequests.py:40 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{"msg":"æä½æå","code":200,"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luX3VzZXJfa2V5IjoiYzUxZjllNTktNThjNi00Y2E3LWEwOTEtYWQ3YmJmZmJkNzkxIn0.gse1-eZnA0mNYE2NXgV9IIdFht0_WjCqUasde7jaICmdjiJ0Iv6DcahRb4zNItSClaoPCWiyxM2F1XnFvIYadQ"}
+2026-01-16 14:06:23,388 - apiutil.py:152 - [apiutil:extract_data] - common.recordlog - INFO - json提取到的{'token': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luX3VzZXJfa2V5IjoiYzUxZjllNTktNThjNi00Y2E3LWEwOTEtYWQ3YmJmZmJkNzkxIn0.gse1-eZnA0mNYE2NXgV9IIdFht0_WjCqUasde7jaICmdjiJ0Iv6DcahRb4zNItSClaoPCWiyxM2F1XnFvIYadQ'}
+2026-01-16 14:06:23,389 - assertions.py:57 - [assertions:contains_assert] - common.recordlog - INFO - 字符串包含，断言成功：预期结果：200
+,实际结果:[200]
+2026-01-16 14:06:23,389 - assertions.py:86 - [assertions:equal_assert] - common.recordlog - INFO - 相等断言成功，接口实际结果为{'msg': '操作成功'}，等于预期结果{'msg': '操作成功'}
+2026-01-16 14:06:23,389 - assertions.py:162 - [assertions:assert_result] - common.recordlog - INFO - 测试成功
+2026-01-16 14:06:23,391 - apiutil.py:86 - [apiutil:specification_yaml] - common.recordlog - INFO - None
+2026-01-16 14:06:23,391 - sendrequests.py:64 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：登录
+2026-01-16 14:06:23,391 - sendrequests.py:65 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://118.25.75.64/prod-api/login
+2026-01-16 14:06:23,391 - sendrequests.py:66 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2026-01-16 14:06:23,391 - sendrequests.py:67 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：登陆接口密码错误
+2026-01-16 14:06:23,391 - sendrequests.py:68 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+2026-01-16 14:06:23,391 - sendrequests.py:69 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：None
+2026-01-16 14:06:23,391 - sendrequests.py:75 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'json': {'username': 'admin', 'password': 'admin1234', 'code': '0000', 'uuid': '123456789'}}
+2026-01-16 14:06:23,998 - sendrequests.py:40 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{"msg":"ç¨æ·ä¸å­å¨/å¯ç éè¯¯","code":500}
+2026-01-16 14:06:23,999 - assertions.py:57 - [assertions:contains_assert] - common.recordlog - INFO - 字符串包含，断言成功：预期结果：500
+,实际结果:[500]
+2026-01-16 14:06:23,999 - assertions.py:86 - [assertions:equal_assert] - common.recordlog - INFO - 相等断言成功，接口实际结果为{'msg': '用户不存在/密码错误'}，等于预期结果{'msg': '用户不存在/密码错误'}
+2026-01-16 14:06:23,999 - assertions.py:162 - [assertions:assert_result] - common.recordlog - INFO - 测试成功
+2026-01-16 14:06:24,001 - apiutil.py:86 - [apiutil:specification_yaml] - common.recordlog - INFO - None
+2026-01-16 14:06:24,001 - sendrequests.py:64 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：登录
+2026-01-16 14:06:24,001 - sendrequests.py:65 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://118.25.75.64/prod-api/login
+2026-01-16 14:06:24,001 - sendrequests.py:66 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2026-01-16 14:06:24,001 - sendrequests.py:67 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：登陆接口用户不存在
+2026-01-16 14:06:24,001 - sendrequests.py:68 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+2026-01-16 14:06:24,001 - sendrequests.py:69 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：None
+2026-01-16 14:06:24,001 - sendrequests.py:75 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'json': {'username': 'admin123', 'password': 'admin123', 'code': '0000', 'uuid': '123456789'}}
+2026-01-16 14:06:24,122 - sendrequests.py:40 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{"msg":"ç¨æ·ä¸å­å¨/å¯ç éè¯¯","code":500}
+2026-01-16 14:06:24,123 - assertions.py:57 - [assertions:contains_assert] - common.recordlog - INFO - 字符串包含，断言成功：预期结果：500
+,实际结果:[500]
+2026-01-16 14:06:24,123 - assertions.py:86 - [assertions:equal_assert] - common.recordlog - INFO - 相等断言成功，接口实际结果为{'msg': '用户不存在/密码错误'}，等于预期结果{'msg': '用户不存在/密码错误'}
+2026-01-16 14:06:24,123 - assertions.py:162 - [assertions:assert_result] - common.recordlog - INFO - 测试成功
+2026-01-16 14:06:24,125 - apiutil.py:86 - [apiutil:specification_yaml] - common.recordlog - INFO - None
+2026-01-16 14:06:24,125 - sendrequests.py:64 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：登录
+2026-01-16 14:06:24,125 - sendrequests.py:65 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://118.25.75.64/prod-api/login
+2026-01-16 14:06:24,125 - sendrequests.py:66 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2026-01-16 14:06:24,125 - sendrequests.py:67 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：登陆接口密码为空
+2026-01-16 14:06:24,125 - sendrequests.py:68 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+2026-01-16 14:06:24,125 - sendrequests.py:69 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：None
+2026-01-16 14:06:24,126 - sendrequests.py:75 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'json': {'username': 'admin', 'password': '', 'code': '0000', 'uuid': '123456789'}}
+2026-01-16 14:06:24,183 - sendrequests.py:40 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{"msg":"ç¨æ·ä¸å­å¨/å¯ç éè¯¯","code":500}
+2026-01-16 14:06:24,184 - assertions.py:57 - [assertions:contains_assert] - common.recordlog - INFO - 字符串包含，断言成功：预期结果：500
+,实际结果:[500]
+2026-01-16 14:06:24,184 - assertions.py:86 - [assertions:equal_assert] - common.recordlog - INFO - 相等断言成功，接口实际结果为{'msg': '用户不存在/密码错误'}，等于预期结果{'msg': '用户不存在/密码错误'}
+2026-01-16 14:06:24,184 - assertions.py:162 - [assertions:assert_result] - common.recordlog - INFO - 测试成功
+2026-01-16 14:06:24,186 - apiutil.py:86 - [apiutil:specification_yaml] - common.recordlog - INFO - None
+2026-01-16 14:06:24,186 - sendrequests.py:64 - [sendrequests:run_main] - common.recordlog - INFO - 接口名称：登录
+2026-01-16 14:06:24,186 - sendrequests.py:65 - [sendrequests:run_main] - common.recordlog - INFO - 接口请求地址：http://118.25.75.64/prod-api/login
+2026-01-16 14:06:24,186 - sendrequests.py:66 - [sendrequests:run_main] - common.recordlog - INFO - 请求方法：post
+2026-01-16 14:06:24,186 - sendrequests.py:67 - [sendrequests:run_main] - common.recordlog - INFO - 测试用例名称：登陆接口验证码错误
+2026-01-16 14:06:24,186 - sendrequests.py:68 - [sendrequests:run_main] - common.recordlog - INFO - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+2026-01-16 14:06:24,186 - sendrequests.py:69 - [sendrequests:run_main] - common.recordlog - INFO - Cookies：None
+2026-01-16 14:06:24,186 - sendrequests.py:75 - [sendrequests:run_main] - common.recordlog - INFO - 请求参数:{'json': {'username': 'admin', 'password': 'admin1234', 'code': '1111', 'uuid': '123456789'}}
+2026-01-16 14:06:24,230 - sendrequests.py:40 - [sendrequests:send_request] - common.recordlog - INFO - 接口的实际返回信息{"msg":"éªè¯ç éè¯¯","code":500}
+2026-01-16 14:06:24,231 - assertions.py:57 - [assertions:contains_assert] - common.recordlog - INFO - 字符串包含，断言成功：预期结果：500
+,实际结果:[500]
+2026-01-16 14:06:24,231 - assertions.py:86 - [assertions:equal_assert] - common.recordlog - INFO - 相等断言成功，接口实际结果为{'msg': '验证码错误'}，等于预期结果{'msg': '验证码错误'}
+2026-01-16 14:06:24,231 - assertions.py:162 - [assertions:assert_result] - common.recordlog - INFO - 测试成功
+2026-01-16 14:06:24,232 - conftest.py:17 - [conftest:fixture_test] - common.recordlog - INFO - ------------这是后置处理了---------------

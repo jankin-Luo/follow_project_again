@@ -18,34 +18,36 @@ class SendRequests():
     def __init__(self):
         self.read = ReadYamlData()
 
-    @retry(
-        stop=stop_after_attempt(2),
-        wait=wait_fixed(1),
-        retry=(retry_if_exception_type(requests.exceptions.Timeout)|
-               retry_if_exception_type(requests.exceptions.ConnectionError)
-        )
-    )
+    # @retry(
+    #     stop=stop_after_attempt(3),
+    #     wait=wait_fixed(1),
+    #     retry=(retry_if_exception_type(requests.exceptions.Timeout)|
+    #            retry_if_exception_type(requests.exceptions.ConnectionError)
+    #     )
+    # )
     def send_request(self, **kwargs):
         cookie = {}
         session = requests.session()
         res = None
         try:
-            res = session.request(**kwargs)
+            print('正在请求……')
+            res = session.request(**kwargs,timeout=10)
             set_cookie = requests.utils.dict_from_cookiejar(res.cookies)
             if set_cookie:
                 cookie['Cookie'] = set_cookie
                 self.read.write_yaml_data(cookie)
                 logs.info(f'cookie:{cookie}')
             logs.info(f'接口的实际返回信息{res.text.encode("utf-8").decode("unicode_escape") if res.text else res}')
-        # except requests.exceptions.ConnectionError:
-        #     logs.error('接口连接服务器异常')
-        #     pytest.fail('接口请求异常，可能是requests请求数过多或请求速度过快')
+        except requests.exceptions.ConnectionError:
+            logs.error('接口连接服务器异常')
+            pytest.fail('接口请求异常，可能是requests请求数过多或请求速度过快')
         except requests.exceptions.HTTPError:
             logs.error('HTTP异常')
             pytest.fail('http请求异常')
         except requests.exceptions.RequestException as e:
             logs.error(e)
-            pytest.fail('请求异常，数据问题')
+            # pytest.fail('请求异常，数据问题')
+            raise
         return res
 
     def run_main(self, name, url, case_name, headers, method, cookies=None, file=None, **kwargs):

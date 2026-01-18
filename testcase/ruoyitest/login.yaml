@@ -1,0 +1,59 @@
+- baseInfo:
+    api_name: 登录
+    url: /login
+    method: post
+    header:
+      Content-Type: application/json;charset=UTF-8
+#      token: ${get_extract_data(product_id,1)}
+    cookies:
+  testCase:
+    - case_name: 登陆接口成功登录
+      json:
+        username: admin
+        password: admin123
+        code: '0000'
+        uuid: '123456789'
+      validation:
+#        - contains: { 'error_code': Null }
+        - contains: { 'code': 200 }
+        - eq: { 'msg': '操作成功' }
+#        - ne: { 'msg': '登录成功' }
+#        - db: select * from products
+      extract:
+        token: $.token
+    - case_name: 登陆接口密码错误
+      json:
+        username: admin
+        password: admin1234
+        code: '0000'
+        uuid: '123456789'
+      validation:
+        - contains: { 'code': 500 }
+        - eq: { 'msg': '用户不存在/密码错误' }
+    - case_name: 登陆接口用户不存在
+      json:
+        username: admin123
+        password: admin123
+        code: '0000'
+        uuid: '123456789'
+      validation:
+        - contains: { 'code': 500 }
+        - eq: { 'msg': '用户不存在/密码错误' }
+    - case_name: 登陆接口密码为空
+      json:
+        username: admin
+        password: ""
+        code: '0000'
+        uuid: '123456789'
+      validation:
+        - contains: { 'code': 500 }
+        - eq: { 'msg': '用户不存在/密码错误' }
+    - case_name: 登陆接口验证码错误
+      json:
+        username: admin
+        password: admin1234
+        code: '1111'
+        uuid: '123456789'
+      validation:
+        - contains: { 'code': 500 }
+        - eq: { 'msg': '验证码错误' }

@@ -9,7 +9,7 @@
     </parameter>
     <parameter>
         <key>项目名</key>
-        <value>xxx项目自动化测试</value>
+        <value>ruoyi项目自动化测试</value>
     </parameter>
     <parameter>
         <key>allure version</key>
